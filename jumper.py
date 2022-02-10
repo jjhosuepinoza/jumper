@@ -9,7 +9,7 @@ def get_word():
     return word.upper()
 
 
-def _play (word):
+def play (word):
     word_completion = "_" * len(word)
     guessed = False
     guessed_letters = [  ]
@@ -116,15 +116,15 @@ def _display_hangman(tries):
     return stages[tries]
 
 
-def _main():
+def main():
     word = get_word()
-    _play(word)
+    play(word)
     while input("😏 Play Again? (Y/N) ").upper() == "Y":
         word = get_word()
-        _play(word)
+        play(word)
     else:
         print("Goodbye!😥" )
 
 if __name__ == "__main__":
-    _main()
+    main()
 pygame .quit()
