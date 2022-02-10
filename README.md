@@ -7,4 +7,10 @@ For programers
 You are just allowed to change the word list, you can change the list.
 Do not make any other change.
 
+Software Required
+Visual Studio Code
+Git
+Github
+
 Javier Espinoza
+esp21017@byui.edu

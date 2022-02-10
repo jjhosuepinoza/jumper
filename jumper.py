@@ -9,49 +9,49 @@ def get_word():
     return word.upper()
 
 
-def play (word):
-    word_completion = "_" * len(word)
-    guessed = False
-    guessed_letters = [  ]
-    tries = 5
+def _play (word):
+    _word_completion = "_" * len(word)
+    _guessed = False
+    _guessed_letters = [  ]
+    _tries = 5
     print("🛬🪂------------J U M P ER-----------🪂🛬")
-    print(_display_hangman(tries))
-    print(word_completion)
+    print(_display_hangman(_tries))
+    print(_word_completion)
     print("\n")
-    while not guessed and tries > 0:
+    while not _guessed and _tries > 0:
         guess = input("🪂Guess a letter🛬 [A-Z] ").upper()
         if len(guess) == 1 and guess.isalpha():
-            if guess in guessed_letters:
+            if guess in _guessed_letters:
                 print("🥱 You already wrote the letter",guess )
             elif guess not in word:
                 print("😜 Nope")
                 print("The letter ",guess," is not in the word.")
-                tries -= 1
-                guessed_letters.append(guess)
+                _tries -= 1
+                _guessed_letters.append(guess)
             else:
                 print("😎 Well done!😎,")
                 print(guess, "is in the word!")
-                guessed_letters.append(guess)
-                word_as_list = list(word_completion)
+                _guessed_letters.append(guess)
+                word_as_list = list(_word_completion)
                 indices = [i for i, letter in enumerate(word) if letter == guess]
                 for index in indices:
                     word_as_list[index] = guess
-                word_completion = "".join(word_as_list)
-                if "_" not in word_completion:
-                    guessed = True
+                _word_completion = "".join(word_as_list)
+                if "_" not in _word_completion:
+                    _guessed = True
         else:
             print("👀You are not typing a letter.")
-        print(_display_hangman(tries))
-        print(word_completion)
+        print(_display_hangman(_tries))
+        print(_word_completion)
         print("\n")
-    if guessed:
+    if _guessed:
         print("🌄✨🎉You won!🎉✨🌄")
     else:
         print("🙀😅You didn't get it.👻 The word was " + word + ".")
 
 
 def _display_hangman(tries):
-    stages = [  
+    _stages = [  
               
                
                 """
@@ -113,18 +113,20 @@ def _display_hangman(tries):
 
                 """
     ]
-    return stages[tries]
+    return _stages[tries]
 
 
-def main():
-    word = get_word()
-    play(word)
+def _main():
+    _word = get_word()
+    _play(_word)
     while input("😏 Play Again? (Y/N) ").upper() == "Y":
-        word = get_word()
-        play(word)
+        _word = get_word()
+        _play(_word)
     else:
         print("Goodbye!😥" )
+    
+
 
 if __name__ == "__main__":
-    main()
+    _main()
 pygame .quit()
