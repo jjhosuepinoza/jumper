@@ -20,3 +20,10 @@ Theaprogrsm has 4 classes that will help to run the program. It is encapsulated 
 
 Javier Espinoza
 esp21017@byui.edu
+
+Johannes Kapolo  
+
+Nathan Jensen  
+
+
+Elerunndu Victor Oluwapelumi
