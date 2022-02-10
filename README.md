@@ -12,5 +12,11 @@ Visual Studio Code
 Git
 Github
 
+Program
+Theaprogrsm has 4 classes that will help to run the program. It is encapsulated so, you  can not change it.
+
+
+
+
 Javier Espinoza
 esp21017@byui.edu
