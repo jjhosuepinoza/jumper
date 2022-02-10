@@ -15,7 +15,7 @@ def _play (word):
     _guessed_letters = [  ]
     _tries = 5
     print("🛬🪂------------J U M P ER-----------🪂🛬")
-    print(_display_hangman(_tries))
+    print(_display_jumper(_tries))
     print(_word_completion)
     print("\n")
     while not _guessed and _tries > 0:
@@ -41,7 +41,7 @@ def _play (word):
                     _guessed = True
         else:
             print("👀You are not typing a letter.")
-        print(_display_hangman(_tries))
+        print(_display_jumper(_tries))
         print(_word_completion)
         print("\n")
     if _guessed:
@@ -50,7 +50,7 @@ def _play (word):
         print("🙀😅You didn't get it.👻 The word was " + word + ".")
 
 
-def _display_hangman(tries):
+def _display_jumper(tries):
     _stages = [  
               
                
